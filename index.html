@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Weather App</title>
+    <link rel="stylesheet" href="weather-style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>SkyCast</h1>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </header>
+
+        <main>
+            <form id="search-form" class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." required autocomplete="off">
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="error-message" class="error-msg hidden"></div>
+
+            <div id="weather-card" class="weather-card hidden">
+                <h2 id="city-name">London, GB</h2>
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="Weather condition">
+                    <div class="temp-container">
+                        <span id="temperature">21</span><span class="unit">°C</span>
+                    </div>
+                </div>
+                <p id="weather-desc">Partly Cloudy</p>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity-val" class="value">64%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span id="wind-val" class="value">4.1 m/s</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="weather-app.js"></script>
+</body>
+</html>
